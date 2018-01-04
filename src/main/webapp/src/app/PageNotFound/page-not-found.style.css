@@ -1,0 +1,20 @@
+.pageNotFoundBigText {
+  font-size: 24px;
+  text-align: center;
+}
+
+.pageNotFoundSmallText {
+  font-size: 16px;
+  text-align: center;
+}
+
+.pageNotFoundImage {
+  height: 30%;
+  margin-bottom: 20px;
+}
+
+.pageNotFoundFormatImage {
+  background-color: white;
+  text-align: center;
+  margin-top: 19%;
+}
