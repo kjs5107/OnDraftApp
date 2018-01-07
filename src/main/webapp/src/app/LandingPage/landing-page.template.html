@@ -1,8 +1,29 @@
 <div class="container">
-  <div class="col-xs-6">
-    <span>Hello</span>
+  <div class="col-xs-5 landingPageWoodBackground">
+    <div class="landingPageLogoWithTitle">
+      <img src="./assets/ondraftLogo.png" alt="" class="landingPageSmallIcon">
+      <span class="landingPageTitleText">Draft</span>
+    </div>
+    <!--TODO: add real auth/backend logic-->
+    <form>
+      <mat-form-field class="col-xs-offset-1 col-xs-10">
+        <input class="landingPageInputText" matInput placeholder="Type email..." [(ngModel)]="userName"
+               type="email" name="userNameLogin">
+      </mat-form-field>
+      <mat-form-field class="col-xs-offset-1 col-xs-10">
+        <input class="landingPageInputText" matInput placeholder="Type password..." [(ngModel)]="password"
+               type="password" name="passwordLogin">
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" class="landingPageActionButtons"
+            [disabled]="!userName.includes('@') || password === ''">
+      Log In
+    </button>
+    <button mat-raised-button color="primary" class="landingPageActionButtons">Create Account</button>
+    <a style="color: #f85200; text-align: center;" class="col-xs-12">Forgot Password?</a>
   </div>
-  <div class="col-xs-6">
-    <span>World</span>
+  <div class="col-xs-7 landingPageImageWithSlogan">
+    <img src="./assets/ondraftLogo.png" alt="" class="landingPageBigIcon">
+    <span class="landingPageSloganText col-xs-12"><i>The Roadmap to Breweries</i></span>
   </div>
 </div>

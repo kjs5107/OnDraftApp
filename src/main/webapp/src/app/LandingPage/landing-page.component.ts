@@ -12,4 +12,7 @@ import { Component } from '@angular/core';
 })
 export class LandingPageComponent {
 
+  userName:string = "";
+  password:string = "";
+
 }
