@@ -1,0 +1,69 @@
+.dashboardTitleText {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #f85200;
+  text-align: center;
+}
+
+.dashboardCheersBackground {
+  background-image: url('../../assets/cheers.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.dashboardButtonsRow {
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.3);
+}
+
+.dashboardButtonsMarginFix {
+  margin-right: 2%;
+}
+
+.dashboardSignOutRow {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dashboardSignOutButton {
+  background-color: white;
+  color: black;
+}
+
+/* Styling for xs (MOBILE) */
+@media screen and (max-width: 767px){
+  .dashboardButtons {
+    width: 47%;
+  }
+
+  .dashboardButtonsMarginFixMobile {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+/* Styling for sm (TABLETS) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .dashboardButtons {
+    width: 23%;
+  }
+}
+/* Styling for md (DESKTOP) */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .dashboardButtons {
+    width: 23%;
+  }
+}
+/* Styling for lg (BIG DESKTOP) */
+@media screen and (min-width: 1200px) {
+  .dashboardButtons {
+    width: 23%;
+  }
+}
+
