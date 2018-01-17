@@ -11,12 +11,22 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from "./PageNotFound/page-not-found.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { LandingPageComponent } from "./LandingPage/landing-page.component";
+import { DashboardComponent } from "./Dashboard/dashboard.component";
+import { AccountComponent } from "./Account/account.component";
+import { BreweryComponent } from "./Brewery/brewery.component";
+import { BrewsComponent } from "./Brews/brews.component";
+import { PaymentComponent } from "./Payment/payment.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    DashboardComponent,
+    AccountComponent,
+    BreweryComponent,
+    BrewsComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
