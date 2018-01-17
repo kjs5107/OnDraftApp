@@ -1,0 +1,5 @@
+.accountBackground {
+  background-image: url('../../assets/Flight.jpg');
+  background-size: cover;
+  height: 100vh;
+}
