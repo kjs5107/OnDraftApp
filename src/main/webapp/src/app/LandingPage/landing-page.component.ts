@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     './landing-page.style.css'
   ]
 })
+
 export class LandingPageComponent {
 
   userName:string = "";

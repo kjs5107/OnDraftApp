@@ -1,31 +1,118 @@
-.appSideNavMainDiv {
-  background-color: black;
-  width: 170px;
-  height: 101%;
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  text-align: center;
-}
-
 .appSideNavLogoImg {
   width: 80%;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.appSideNavText {
-  color: white;
-  padding: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  text-align: left;
-  font-size: 17px;
-}
+/* Styling for xs (MOBILE) */
+@media screen and (max-width: 767px){
+  .appSideNavMainDiv {
+    background-color: black;
+    width: 70px;
+    height: 101%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    text-align: center;
+  }
 
-.appSideNavTextDiv {
-  height: 25px;
-  margin-right: 0;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  .appSideNavText {
+    color: white;
+    padding: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .appSideNavTextDiv {
+    height: 35px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+/* Styling for sm (TABLETS) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .appSideNavMainDiv {
+    background-color: black;
+    width: 170px;
+    height: 101%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    text-align: center;
+  }
+
+  .appSideNavText {
+    color: white;
+    padding: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: left;
+    font-size: 17px;
+  }
+
+  .appSideNavTextDiv {
+    height: 25px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+/* Styling for md (DESKTOP) */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .appSideNavMainDiv {
+    background-color: black;
+    width: 170px;
+    height: 101%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    text-align: center;
+  }
+
+  .appSideNavText {
+    color: white;
+    padding: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: left;
+    font-size: 17px;
+  }
+
+  .appSideNavTextDiv {
+    height: 25px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+/* Styling for lg (BIG DESKTOP) */
+@media screen and (min-width: 1200px) {
+  .appSideNavMainDiv {
+    background-color: black;
+    width: 170px;
+    height: 101%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    text-align: center;
+  }
+
+  .appSideNavText {
+    color: white;
+    padding: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: left;
+    font-size: 17px;
+  }
+
+  .appSideNavTextDiv {
+    height: 25px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
 }

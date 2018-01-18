@@ -12,6 +12,31 @@ import { Component } from '@angular/core';
 })
 export class AccountComponent {
 
+  userName:string = 'blah@blah.com';
+  password:string = '';
+  changedPassword1:string = '';
+  changedPassword2:string = '';
+  changePasswordRequest:boolean = false;
 
+  firstName:string = '';
+  lastName:string = '';
+  phoneNumber:string = '';
+
+  requestChangePassword() {
+    this.changePasswordRequest = !this.changePasswordRequest;
+  }
+
+  cancelChangePassword() {
+    this.changedPassword1 = '';
+    this.changedPassword2 = '';
+    this.requestChangePassword();
+  }
+
+  saveChangePassword() {
+    this.password = this.changedPassword1;
+    this.changedPassword1 = '';
+    this.changedPassword2 = '';
+    this.requestChangePassword();
+  }
 
 }
