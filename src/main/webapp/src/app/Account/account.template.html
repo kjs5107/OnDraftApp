@@ -1,3 +1,56 @@
-<div class="container">
-
+<div class="container accountBackground">
+  <div class="col-xs-8 accountInfoBackground">
+    <span class="col-xs-12 accountTitleText">Account Information</span>
+    <span class="col-xs-12 accountHeaderText">Login Information</span>
+    <form>
+      <mat-form-field id="userNameInfo" class="col-xs-8 accountInputField">
+        <input [readonly]=true class="accountInputText" matInput placeholder="Email" [(ngModel)]="userName"
+               type="text" name="userNameInfo">
+      </mat-form-field>
+      <div class="col-xs-12">
+        <button *ngIf="!changePasswordRequest" (click)="requestChangePassword()" mat-raised-button color="primary" class="accountActionButtons">
+          Change Password
+        </button>
+      </div>
+      <div *ngIf="changePasswordRequest">
+        <mat-form-field class="col-xs-8 accountInputField">
+          <input class="accountInputText" matInput placeholder="Type new password..." [(ngModel)]="changedPassword1"
+                 type="password" name="passwordChange1">
+        </mat-form-field>
+        <mat-form-field style="margin-bottom: 10px;" class="col-xs-8 accountInputField">
+          <input class="accountInputText" matInput placeholder="Retype new password..." [(ngModel)]="changedPassword2"
+                 type="password" name="passwordChange2">
+        </mat-form-field>
+        <div class="col-xs-6">
+          <button (click)="cancelChangePassword()" mat-raised-button color="primary" class="accountActionButtons">
+            Cancel
+          </button>
+        </div>
+        <div class="col-xs-6">
+          <button (click)="saveChangePassword()" mat-raised-button color="primary" class="accountActionButtons"
+                  style="float: right;" [disabled]="changedPassword1 == '' || changedPassword1 !== changedPassword2">
+            Update Password
+          </button>
+        </div>
+      </div>
+    </form>
+    <span class="col-xs-12 accountHeaderText">Personal Information</span>
+    <mat-form-field id="userNameInfo" class="col-xs-8 accountInputField">
+      <input class="accountInputText" matInput placeholder="First Name" [(ngModel)]="firstName"
+             type="text" name="firstName">
+    </mat-form-field>
+    <mat-form-field id="userNameInfo" class="col-xs-8 accountInputField">
+      <input class="accountInputText" matInput placeholder="Last Name" [(ngModel)]="lastName"
+             type="text" name="lastName">
+    </mat-form-field>
+    <mat-form-field id="userNameInfo" class="col-xs-8 accountInputField">
+      <input class="accountInputText" matInput placeholder="Phone Number" [(ngModel)]="phoneNumber"
+             type="number" name="phoneNumber">
+    </mat-form-field>
+    <div class="col-xs-12">
+      <button mat-raised-button color="primary" class="accountActionButtons">
+        Update Account
+      </button>
+    </div>
+  </div>
 </div>

@@ -1,1 +1,37 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="appSideNavMainDiv" [hidden]="hideNav">
+    <div class="col-xs-12" style="padding: 0;">
+      <a routerLink="/dashboard"><img src="./assets/ondraftLogo.png" alt="" class="appSideNavLogoImg"></a>
+      <hr size="1" width="70%">
+    </div>
+    <div (mouseenter)="sideNavBackground.account = '#f85200'"
+         (mouseleave)="sideNavNavigation.account ?
+                       sideNavBackground.account = '#f85200' : sideNavBackground.account = 'black'"
+         class="col-xs-12 appSideNavTextDiv" [ngStyle]="{'background-color':sideNavBackground.account}">
+      <a routerLink="/account" class="appSideNavText col-xs-12"><span>My Account</span></a>
+    </div>
+    <div (mouseenter)="sideNavBackground.brewery = '#f85200'"
+         (mouseleave)="sideNavNavigation.brewery ?
+                       sideNavBackground.brewery = '#f85200' : sideNavBackground.brewery = 'black'"
+         class="col-xs-12 appSideNavTextDiv" [ngStyle]="{'background-color':sideNavBackground.brewery}">
+      <a routerLink="/brewery" class="appSideNavText col-xs-12"><span>My Brewery</span></a>
+    </div>
+    <div (mouseenter)="sideNavBackground.brews = '#f85200'"
+         (mouseleave)="sideNavNavigation.brews ?
+                       sideNavBackground.brews = '#f85200' : sideNavBackground.brews = 'black'"
+         class="col-xs-12 appSideNavTextDiv" [ngStyle]="{'background-color':sideNavBackground.brews}">
+      <a routerLink="/brews" class="appSideNavText col-xs-12"><span>My Brews</span></a>
+    </div>
+    <div (mouseenter)="sideNavBackground.payment = '#f85200'"
+         (mouseleave)="sideNavNavigation.payment ?
+                       sideNavBackground.payment = '#f85200' : sideNavBackground.payment = 'black'"
+         class="col-xs-12 appSideNavTextDiv" [ngStyle]="{'background-color':sideNavBackground.payment}">
+      <a routerLink="/payment" class="appSideNavText col-xs-12"><span>Payment Details</span></a>
+    </div>
+    <div (mouseenter)="sideNavBackground.signout = '#f85200'" (mouseleave)="sideNavBackground.signout = 'black'"
+         class="col-xs-12 appSideNavTextDiv" [ngStyle]="{'background-color':sideNavBackground.signout}">
+      <a routerLink="/landing" class="appSideNavText col-xs-12"><span>Sign Out</span></a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

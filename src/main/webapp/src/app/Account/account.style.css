@@ -1,0 +1,100 @@
+:host ::ng-deep .mat-input-placeholder {
+  color: white;
+}
+
+:host ::ng-deep .mat-focused .mat-form-field-label {
+  color: darkorange;
+}
+
+:host ::ng-deep .mat-form-field-underline {
+  background-color: white;
+}
+
+:host ::ng-deep .mat-raised-button.mat-primary[disabled], .mat-raised-button.mat-accent[disabled],
+.mat-raised-button.mat-warn[disabled], .mat-raised-button[disabled][disabled], .mat-fab.mat-primary[disabled],
+.mat-fab.mat-accent[disabled], .mat-fab.mat-warn[disabled], .mat-fab[disabled][disabled],
+.mat-mini-fab.mat-primary[disabled], .mat-mini-fab.mat-accent[disabled], .mat-mini-fab.mat-warn[disabled],
+.mat-mini-fab[disabled][disabled] {
+  background-color: gray;
+}
+
+.accountBackground {
+  background-image: url('../../assets/Flight.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.accountInfoBackground {
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  margin-top: 6%;
+  margin-left: 20%;
+}
+
+.accountHeaderText {
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accountInputText {
+  color: white;
+}
+
+.accountInputField {
+  margin-top: 15px;
+}
+
+.accountActionButtons {
+  margin-bottom: 15px;
+}
+
+/* Styling for xs (MOBILE) */
+@media screen and (max-width: 767px){
+  .accountTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+}
+/* Styling for sm (TABLETS) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .accountTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+}
+/* Styling for md (DESKTOP) */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .accountTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+}
+/* Styling for lg (BIG DESKTOP) */
+@media screen and (min-width: 1200px) {
+  .accountTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+}
+
