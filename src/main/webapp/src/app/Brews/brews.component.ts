@@ -12,6 +12,10 @@ import { Component } from '@angular/core';
 })
 export class BrewsComponent {
 
-
+  verticallyAlign(): string {
+    //TODO: replace 'brewX' with 'brew' + index to this getElementById when database connection is all hooked up
+    console.log(document.getElementById('brewX').offsetHeight / 4 + 'px;');
+    return document.getElementById('brewX').offsetHeight / 4 + 'px';
+  }
 
 }

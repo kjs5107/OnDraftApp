@@ -1,0 +1,40 @@
+<div class="container brewsBackground">
+  <div class="col-xs-10 brewsInfoBackground">
+    <span class="col-xs-12 brewsTitleText">Brews Information</span>
+    <div class="col-xs-12" style="text-align: center;">
+      <button mat-raised-button color="primary" class="brewsActionButtons">
+        Add New Brew
+      </button>
+    </div>
+    <!--Static Headers-->
+    <div class="col-xs-12 brewsStaticHeaders">
+      <span class="col-xs-4 col-sm-1 brewsHeaderText">Name</span>
+      <span class="col-sm-2 brewsHeaderText hidden-xs">Style</span>
+      <span class="col-xs-2 col-sm-1 brewsHeaderText">ABV</span>
+      <span class="col-xs-2 col-sm-1 brewsHeaderText">IBU</span>
+      <span class="col-sm-2 brewsHeaderText hidden-xs">Summary</span>
+      <span class="col-xs-4 col-sm-2 brewsHeaderText">Available?</span>
+      <span class="col-sm-1 brewsHeaderText hidden-xs">Starts</span>
+      <span class="col-sm-1 brewsHeaderText hidden-xs">Ends</span>
+      <!--Mobile will be click the div for edit instead of having an edit button-->
+      <span class="col-sm-1 brewsHeaderText hidden-xs"></span>
+    </div>
+    <!--Dynamic Data-->
+    <!--TODO: add *ngFor to loop through all data in database-->
+    <!--TODO: set id of div below to be related to index instead of statically X-->
+    <!--TODO: pass in this index into the veritcallyAlign() function so it knows which row to align-->
+    <div id="brewX" class="col-xs-12 brewsDynamicTableData">
+      <span class="col-xs-4 col-sm-1 brewsDataText" [ngStyle]="{'margin-top':verticallyAlign()}">Name</span>
+      <span class="col-sm-2 brewsDataText hidden-xs" [ngStyle]="{'margin-top':verticallyAlign()}">Style</span>
+      <span class="col-xs-2 col-sm-1 brewsDataText" [ngStyle]="{'margin-top':verticallyAlign()}">ABV</span>
+      <span class="col-xs-2 col-sm-1 brewsDataText" [ngStyle]="{'margin-top':verticallyAlign()}">IBU</span>
+      <span class="col-sm-2 brewsDataText hidden-xs" [ngStyle]="{'margin-top':verticallyAlign()}">Summary</span>
+      <span class="col-xs-4 col-sm-2 brewsDataText" [ngStyle]="{'margin-top':verticallyAlign()}">Available?</span>
+      <span class="col-sm-1 brewsDataText hidden-xs" [ngStyle]="{'margin-top':verticallyAlign()}">Starts</span>
+      <span class="col-sm-1 brewsDataText hidden-xs" [ngStyle]="{'margin-top':verticallyAlign()}">Ends</span>
+      <!--<button mat-raised-button color="primary" class="col-sm-1 brewsActionButtons hidden-xs">-->
+        <!--Edit-->
+      <!--</button>-->
+    </div>
+  </div>
+</div>
