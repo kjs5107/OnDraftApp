@@ -1,0 +1,119 @@
+:host ::ng-deep .mat-checkbox-frame {
+  border-color: white;
+}
+
+:host ::ng-deep .mat-checkbox-layout .mat-checkbox-label {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.breweryBackground {
+  background-image: url('../../assets/Flight.jpg');
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.breweryInfoBackground {
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  margin-top: 6%;
+  margin-left: 20%;
+  margin-bottom: 60px;
+}
+
+.breweryHeaderText {
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.breweryInputText {
+  color: white;
+}
+
+.breweryInputField {
+  margin-top: 15px;
+}
+
+.breweryActionButtons {
+  margin-bottom: 15px;
+}
+
+.breweryCenterButtons {
+  text-align: center;
+}
+
+.breweryDisclaimerText {
+  margin-top: 4px;
+  padding-right: 0;
+  color: #f85200;
+}
+
+.breweryCheckboxText {
+  color: white;
+}
+
+/* Styling for xs (MOBILE) */
+@media screen and (max-width: 767px){
+  .breweryTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+
+  .breweryStateField {
+    padding-right: 0;
+  }
+}
+/* Styling for sm (TABLETS) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .breweryTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+
+  .breweryStateField {
+    padding: 0;
+  }
+}
+/* Styling for md (DESKTOP) */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .breweryTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+
+  .breweryStateField {
+    padding: 0;
+  }
+}
+/* Styling for lg (BIG DESKTOP) */
+@media screen and (min-width: 1200px) {
+  .breweryTitleText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f85200;
+    text-align: center;
+  }
+
+  .breweryStateField {
+    padding: 0;
+  }
+}

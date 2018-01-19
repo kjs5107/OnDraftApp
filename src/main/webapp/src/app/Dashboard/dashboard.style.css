@@ -12,7 +12,7 @@
 .dashboardCheersBackground {
   background-image: url('../../assets/cheers.jpg');
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .dashboardButtonsRow {

@@ -1,0 +1,119 @@
+<div class="container breweryBackground">
+  <div class="col-xs-8 breweryInfoBackground">
+    <span class="col-xs-12 breweryTitleText">My Brewery</span>
+    <form ngNoForm>
+      <!--Brewery Profile-->
+      <div class="col-xs-12 col-sm-6">
+        <span class="col-xs-12 breweryHeaderText">Brewery Profile</span>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Brewery Name" [(ngModel)]="name"
+                 type="text" name="breweryName">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 breweryInputField">
+          <textarea class="breweryInputText" matInput placeholder="Brewery Summary (e.g. Family owned since 1995)"
+                    [(ngModel)]="summary" name="brewerySummary">
+          </textarea>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Brewery Address Line 1" [(ngModel)]="address1"
+                 type="text" name="breweryAddress1">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Brewery Address Line 2" [(ngModel)]="address2"
+                 type="text" name="breweryAddress2">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-6 breweryInputField" style="padding-right: 0;">
+          <input class="breweryInputText" matInput placeholder="City" [(ngModel)]="city"
+                 type="text" name="breweryCity">
+        </mat-form-field>
+        <mat-form-field class="col-xs-6 col-sm-2 breweryInputField breweryStateField">
+          <input class="breweryInputText" matInput placeholder="State" [(ngModel)]="state"
+                 type="text" name="breweryState" maxlength="2">
+        </mat-form-field>
+        <mat-form-field class="col-xs-6 col-sm-3 breweryInputField" style="margin-bottom: 10px; padding: 0;">
+          <input class="breweryInputText" matInput placeholder="Zip" [(ngModel)]="zip"
+                 type="text" name="breweryZip">
+        </mat-form-field>
+      </div>
+      <!--Brewery Hours-->
+      <div class="col-xs-12 col-sm-6">
+        <span class="col-xs-12 breweryHeaderText">Brewery Hours</span>
+        <span class="col-xs-12 breweryDisclaimerText">If hours are left blank, it will display as "CLOSED."</span>
+        <span class="col-xs-12 breweryDisclaimerText">
+          Please enter hours with the following format: hh:mmpm-hh:mmpm (For Example, 11:00am-10:00pm)
+        </span>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Monday Hours" [(ngModel)]="mon"
+                 type="text" name="mondayHours">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Tuesday Hours" [(ngModel)]="tues"
+                 type="text" name="tuesdayHours">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Wednesday Hours" [(ngModel)]="wed"
+                 type="text" name="wednesdayHours">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Thursday Hours" [(ngModel)]="thur"
+                 type="text" name="thursdayHours">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Friday Hours" [(ngModel)]="fri"
+                 type="text" name="fridayHours">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Saturday Hours" [(ngModel)]="sat"
+                 type="text" name="saturdayHours">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 breweryInputField">
+          <input class="breweryInputText" matInput placeholder="Sunday Hours" [(ngModel)]="sun"
+                 type="text" name="sundayHours">
+        </mat-form-field>
+      </div>
+      <!--Update Button-->
+      <div class="col-xs-12 breweryCenterButtons">
+        <button mat-raised-button color="primary" class="breweryActionButtons">
+          Update Info
+        </button>
+      </div>
+    </form>
+    <span class="col-xs-12 breweryHeaderText">Brewery Amenities</span>
+    <div class="col-xs-12">
+      <form ngNoForm>
+        <br/>
+        <!--TODO: add ngModel bindings to know what is checked (booleans)-->
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Additional Seating</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Bar Games</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Board Games</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Brewery Tours</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Bring Your Own Food</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Dance Floor</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Dog Friendly (Inside)</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Dog Friendly (Outside)</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Drink Specials</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Food Truck(s)</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Free Merchandise</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Gift Store/Merchandise</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Happy Hour</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Liquor Bar</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Live Music/Stage Area</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Mug Club</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Off-Street Parking</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">On Site Food</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Outdoor Games</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Outdoor Seating</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Playing Cards</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Tap Room Only</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">TV's</mat-checkbox>
+        <mat-checkbox class="breweryCheckboxText col-xs-12 col-sm-6 col-md-4 col-lg-3">Wine Bar</mat-checkbox>
+        <!--Update Button-->
+        <div class="col-xs-12 breweryCenterButtons">
+          <button mat-raised-button color="primary" class="breweryActionButtons">
+            Update Amenities
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
