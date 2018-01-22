@@ -10,6 +10,7 @@ import { AccountComponent } from "./Account/account.component";
 import { BreweryComponent } from "./Brewery/brewery.component";
 import { BrewsComponent } from "./Brews/brews.component";
 import { PaymentComponent } from "./Payment/payment.component";
+import { CreateEditBrewsComponent } from "./CreateOrEditBrews/create-edit-brews.component";
 
 /**
  * Defines the url paths for all the features in OnDraftApp, with their components attached.
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent },
   { path: 'brewery', component: BreweryComponent },
   { path: 'brews', component: BrewsComponent },
+  //Add an extra guard for create-edit to check if both booleans are false...if they are then don't go here
+  { path: 'create-edit-brews', component: CreateEditBrewsComponent },
   { path: 'payment', component: PaymentComponent },
   // IMPORTANT: You must leave the following wildcard path as the last path no matter what. You've been warned.
   { path: '**', component: PageNotFoundComponent }

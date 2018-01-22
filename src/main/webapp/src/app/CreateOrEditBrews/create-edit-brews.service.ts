@@ -9,7 +9,15 @@ import { Observable } from 'rxjs/Observable'
 @Injectable()
 export class CreateEditBrewsService {
 
-  fromEditClick:boolean = false;
-  fromCreateClick:boolean = false;
+  public fromEditClick:boolean = false;
+  public fromCreateClick:boolean = true;
+
+  editClicked() {
+    this.fromEditClick = !this.fromEditClick;
+  }
+
+  createClicked() {
+    this.fromCreateClick = !this.fromCreateClick;
+  }
 
 }

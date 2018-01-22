@@ -1,6 +1,99 @@
 <div class="container createEditBrewsBackground">
   <div class="col-xs-8 createEditBrewsInfoBackground">
-    <span class="col-xs-12 createEditBrewsTitleText">Create New or Edit Brew</span>
-
+    <div  *ngIf="createEditBrewsService.fromCreateClick">
+      <span class="col-xs-12 createEditBrewsTitleText">Create New Brew</span>
+      <form ngNoForm>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="Brew Name" [(ngModel)]="name"
+                 type="text" name="brewName">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="Brew Style" [(ngModel)]="style"
+                 type="text" name="brewStyle">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="ABV" [(ngModel)]="abv"
+                 type="text" name="brewAbv">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="IBU" [(ngModel)]="ibu"
+                 type="text" name="brewIbu">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="Brew Summary" [(ngModel)]="brewSummary"
+                 type="text" name="brewSum">
+        </mat-form-field>
+        <mat-checkbox class="createEditBrewsCheckboxText col-xs-12" [(ngModel)]="availNow">
+          Available Now?
+        </mat-checkbox>
+        <div *ngIf="availNow">
+          <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField" style="margin-top: -10px;">
+            <input class="createEditBrewsInputText" matInput placeholder="Availability Starts"
+                   [matDatepicker]="brewAvailStartPicker" [(ngModel)]="availStart" type="text" name="brewStart">
+            <mat-datepicker-toggle matSuffix [for]="brewAvailStartPicker"></mat-datepicker-toggle>
+            <mat-datepicker #brewAvailStartPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+            <input class="createEditBrewsInputText" matInput placeholder="Availability Ends"
+                   [matDatepicker]="brewAvailEndPicker" [(ngModel)]="availEnd" type="text" name="brewEnd">
+            <mat-datepicker-toggle matSuffix [for]="brewAvailEndPicker"></mat-datepicker-toggle>
+            <mat-datepicker #brewAvailEndPicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-xs-12">
+          <button class="createEditBrewsActionButtons" mat-raised-button color="primary" routerLink="/brews">
+            Create Brew
+          </button>
+        </div>
+      </form>
+    </div>
+    <div *ngIf="createEditBrewsService.fromEditClick">
+      <span class="col-xs-12 createEditBrewsTitleText">Edit Brew</span>
+      <form ngNoForm>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="Brew Name" [(ngModel)]="name"
+                 type="text" name="brewName">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="Brew Style" [(ngModel)]="style"
+                 type="text" name="brewStyle">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="ABV" [(ngModel)]="abv"
+                 type="text" name="brewAbv">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="IBU" [(ngModel)]="ibu"
+                 type="text" name="brewIbu">
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+          <input class="createEditBrewsInputText" matInput placeholder="Brew Summary" [(ngModel)]="brewSummary"
+                 type="text" name="brewSum">
+        </mat-form-field>
+        <mat-checkbox class="createEditBrewsCheckboxText col-xs-12" [(ngModel)]="availNow">
+          Available Now?
+        </mat-checkbox>
+        <div *ngIf="availNow">
+          <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField" style="margin-top: -10px;">
+            <input class="createEditBrewsInputText" matInput placeholder="Availability Starts"
+                   [matDatepicker]="brewAvailStartPicker" [(ngModel)]="availStart" type="text" name="brewStart">
+            <mat-datepicker-toggle matSuffix [for]="brewAvailStartPicker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi="true" #brewAvailStartPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="col-xs-12 col-sm-8 createEditBrewsInputField">
+            <input class="createEditBrewsInputText" matInput placeholder="Availability Ends"
+                   [matDatepicker]="brewAvailEndPicker" [(ngModel)]="availEnd" type="text" name="brewEnd">
+            <mat-datepicker-toggle matSuffix [for]="brewAvailEndPicker"></mat-datepicker-toggle>
+            <mat-datepicker #brewAvailEndPicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-xs-12">
+          <button class="createEditBrewsActionButtons" mat-raised-button color="primary"
+                  type=button routerLink="/brews">
+            Update Brew
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
