@@ -1,7 +1,7 @@
 /**
  * Created by kylescagnelli on 1/17/18.
  */
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'brews',
@@ -12,10 +12,13 @@ import { Component } from '@angular/core';
 })
 export class BrewsComponent {
 
-  verticallyAlign(): string {
-    //TODO: replace 'brewX' with 'brew' + index to this getElementById when database connection is all hooked up
-    console.log(document.getElementById('brewX').offsetHeight / 4 + 'px;');
-    return document.getElementById('brewX').offsetHeight / 4 + 'px';
+  newInnerWidth:any = window.innerWidth;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.newInnerWidth = event.target.innerWidth;
+    console.log(this.newInnerWidth);
   }
+
 
 }

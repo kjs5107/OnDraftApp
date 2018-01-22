@@ -16,6 +16,8 @@ import { AccountComponent } from "./Account/account.component";
 import { BreweryComponent } from "./Brewery/brewery.component";
 import { BrewsComponent } from "./Brews/brews.component";
 import { PaymentComponent } from "./Payment/payment.component";
+import { CreateEditBrewsService } from "./CreateOrEditBrews/create-edit-brews.service";
+import { CreateEditBrewsComponent } from "./CreateOrEditBrews/create-edit-brews.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { PaymentComponent } from "./Payment/payment.component";
     AccountComponent,
     BreweryComponent,
     BrewsComponent,
+    CreateEditBrewsComponent,
     PaymentComponent
   ],
   imports: [
@@ -40,7 +43,7 @@ import { PaymentComponent } from "./Payment/payment.component";
     MatButtonModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [CreateEditBrewsService],
   bootstrap: [AppComponent]
 })
 
