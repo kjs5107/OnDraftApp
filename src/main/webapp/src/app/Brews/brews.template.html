@@ -1,0 +1,55 @@
+<div class="container brewsBackground">
+  <div class="col-xs-10 brewsInfoBackground">
+    <span class="col-xs-12 brewsTitleText">Brews Information</span>
+    <div class="col-xs-12" style="text-align: center;">
+      <button mat-raised-button color="primary" class="brewsActionButtons"
+              (click)="enableFromCreateButton()" routerLink="/create-edit-brews">
+        Add New Brew
+      </button>
+    </div>
+    <table class="col-xs-12">
+      <!--Static Headers-->
+      <tr class="brewsStaticHeaders">
+        <th class="brewsHeaderText">Name</th>
+        <th class="brewsHeaderText hidden-xs">Style</th>
+        <th class="brewsHeaderText">ABV</th>
+        <th class="brewsHeaderText">IBU</th>
+        <th class="brewsHeaderText hidden-xs">Summary</th>
+        <th class="brewsHeaderText hidden-xs hidden-sm">Available?</th>
+        <th class="brewsHeaderText visible-xs visible-sm">Avail?</th>
+        <th class="brewsHeaderText hidden-xs hidden-sm">Starts</th>
+        <th class="brewsHeaderText hidden-xs hidden-sm">Ends</th>
+        <!--Mobile will be click the div for edit instead of having an edit button-->
+        <th class="brewsHeaderText hidden-xs"></th>
+      </tr>
+      <!--Dynamic Data-->
+      <!--TODO: add *ngFor to loop through all data in database-->
+      <!--Mobile View-->
+      <tr *ngIf="newInnerWidth <= 767" class="brewsDynamicTableData"
+          (click)="enableFromEditButton()" routerLink="/create-edit-brews">
+        <td class="brewsDataText">Test</td>
+        <td class="brewsDataText">14.5</td>
+        <td class="brewsDataText">8.5</td>
+        <td class="brewsDataText">Yes</td>
+      </tr>
+      <!--Desktop View-->
+      <tr *ngIf="newInnerWidth >= 768" class="brewsDynamicTableData">
+        <td class="brewsDataText">Test</td>
+        <td class="brewsDataText">IPA</td>
+        <td class="brewsDataText">14.5</td>
+        <td class="brewsDataText">8.5</td>
+        <td class="brewsDataText">A smooth taste</td>
+        <td class="brewsDataText">Yes</td>
+        <td class="brewsDataText hidden-sm">01/01/17</td>
+        <td class="brewsDataText hidden-sm">01/30/17</td>
+        <!--Mobile will be click the div for edit instead of having an edit button-->
+        <td class="brewsDataText">
+          <button mat-raised-button color="primary" routerLink="/create-edit-brews"
+                  (click)="enableFromEditButton()">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,45 +1,55 @@
-th, td {
-  padding: 15px;
+:host ::ng-deep .mat-checkbox-frame {
+  border-color: white;
 }
 
-.brewsBackground {
+:host ::ng-deep .mat-checkbox-layout .mat-checkbox-label {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+:host ::ng-deep .mat-icon-button {
+  color: white;
+}
+
+.createEditBrewsBackground {
   background-image: url('../../assets/Flight.jpg');
   background-size: cover;
   min-height: 100vh;
 }
 
-.brewsStaticHeaders {
-  background-color: #f85200;
-  border: white solid thin;
-  text-align: left;
-  vertical-align: middle;
+.createEditBrewsInfoBackground {
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  margin-top: 6%;
+  margin-left: 20%;
 }
 
-.brewsDynamicTableData {
-  border-bottom: white solid thin;
-  border-left: white solid thin;
-  border-right: white solid thin;
-  text-align: left;
-  vertical-align: middle;
-  min-height: 50px;
-}
-
-.brewsHeaderText {
+.createEditBrewsHeaderText {
   color: white;
   font-size: 16px;
 }
 
-.brewsDataText {
+.createEditBrewsActionButtons {
+  margin-bottom: 30px;
+}
+
+.createEditBrewsInputText {
   color: white;
 }
 
-.brewsActionButtons {
-  margin-bottom: 30px;
+.createEditBrewsInputField {
+  margin-top: 15px;
+}
+
+.createEditBrewsCheckboxText {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Styling for xs (MOBILE) */
 @media screen and (max-width: 767px){
-  .brewsTitleText {
+  .createEditBrewsTitleText {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 30px;
@@ -48,17 +58,10 @@ th, td {
     color: #f85200;
     text-align: center;
   }
-
-  .brewsInfoBackground {
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 5px;
-    margin-top: 6%;
-    margin-left: 14%;
-  }
 }
 /* Styling for sm (TABLETS) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .brewsTitleText {
+  .createEditBrewsTitleText {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 40px;
@@ -66,18 +69,11 @@ th, td {
     letter-spacing: 1px;
     color: #f85200;
     text-align: center;
-  }
-
-  .brewsInfoBackground {
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 5px;
-    margin-top: 6%;
-    margin-left: 17.5%;
   }
 }
 /* Styling for md (DESKTOP) */
 @media screen and (min-width: 992px) and (max-width: 1199px){
-  .brewsTitleText {
+  .createEditBrewsTitleText {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 40px;
@@ -85,18 +81,11 @@ th, td {
     letter-spacing: 1px;
     color: #f85200;
     text-align: center;
-  }
-
-  .brewsInfoBackground {
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 5px;
-    margin-top: 6%;
-    margin-left: 13%;
   }
 }
 /* Styling for lg (BIG DESKTOP) */
 @media screen and (min-width: 1200px) {
-  .brewsTitleText {
+  .createEditBrewsTitleText {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 40px;
@@ -104,13 +93,6 @@ th, td {
     letter-spacing: 1px;
     color: #f85200;
     text-align: center;
-  }
-
-  .brewsInfoBackground {
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 5px;
-    margin-top: 6%;
-    margin-left: 13%;
   }
 }
 

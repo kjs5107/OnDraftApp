@@ -1,7 +1,10 @@
 // Angular Imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatInputModule, MatFormFieldModule, MatButtonModule, MatCheckboxModule } from '@angular/material';
+import {
+  MatInputModule, MatFormFieldModule, MatButtonModule, MatCheckboxModule,
+  MatDatepickerModule, MatNativeDateModule
+} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
@@ -16,6 +19,8 @@ import { AccountComponent } from "./Account/account.component";
 import { BreweryComponent } from "./Brewery/brewery.component";
 import { BrewsComponent } from "./Brews/brews.component";
 import { PaymentComponent } from "./Payment/payment.component";
+import { CreateEditBrewsService } from "./CreateOrEditBrews/create-edit-brews.service";
+import { CreateEditBrewsComponent } from "./CreateOrEditBrews/create-edit-brews.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +31,7 @@ import { PaymentComponent } from "./Payment/payment.component";
     AccountComponent,
     BreweryComponent,
     BrewsComponent,
+    CreateEditBrewsComponent,
     PaymentComponent
   ],
   imports: [
@@ -38,9 +44,11 @@ import { PaymentComponent } from "./Payment/payment.component";
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [CreateEditBrewsService],
   bootstrap: [AppComponent]
 })
 
