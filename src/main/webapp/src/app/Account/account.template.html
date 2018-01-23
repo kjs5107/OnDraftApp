@@ -8,7 +8,8 @@
                type="text" name="userNameInfo">
       </mat-form-field>
       <div class="col-xs-12">
-        <button *ngIf="!changePasswordRequest" (click)="requestChangePassword()" mat-raised-button color="primary" class="accountActionButtons">
+        <button *ngIf="!changePasswordRequest" (click)="requestChangePassword()" mat-raised-button
+                type="button" color="primary" class="accountActionButtons">
           Change Password
         </button>
       </div>
@@ -22,13 +23,14 @@
                  type="password" name="passwordChange2">
         </mat-form-field>
         <div class="col-xs-6">
-          <button (click)="cancelChangePassword()" mat-raised-button color="primary" class="accountActionButtons">
+          <button (click)="cancelChangePassword()" mat-raised-button color="primary"
+                  type="button" class="accountActionButtons">
             Cancel
           </button>
         </div>
         <div class="col-xs-6">
           <button (click)="saveChangePassword()" mat-raised-button color="primary" class="accountActionButtons"
-                  style="float: right;" [disabled]="changedPassword1 == '' || changedPassword1 !== changedPassword2">
+                  style="float: right;" type="button" [disabled]="changedPassword1 == '' || changedPassword1 !== changedPassword2">
             Update Password
           </button>
         </div>
@@ -48,7 +50,7 @@
              type="number" name="phoneNumber">
     </mat-form-field>
     <div class="col-xs-12">
-      <button mat-raised-button color="primary" class="accountActionButtons">
+      <button mat-raised-button color="primary" class="accountActionButtons" type="button">
         Update Account
       </button>
     </div>
